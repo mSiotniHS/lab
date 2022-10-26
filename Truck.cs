@@ -2,7 +2,7 @@
 
 namespace lab;
 
-public class Truck : Vehicle
+public sealed class Truck : Vehicle
 {
 	public Truck(string brand, uint releaseYear, double initialPrice) : base(brand, releaseYear, initialPrice)
 	{
