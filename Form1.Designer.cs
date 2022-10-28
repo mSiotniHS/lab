@@ -29,97 +29,234 @@ partial class Form1
 	/// </summary>
 	private void InitializeComponent()
 	{
-            this.textFieldsGroupBox = new System.Windows.Forms.GroupBox();
-            this.buttonsGroupBox = new System.Windows.Forms.GroupBox();
-            this.vehicleGridView = new System.Windows.Forms.DataGridView();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            ((System.ComponentModel.ISupportInitialize)(this.vehicleGridView)).BeginInit();
-            this.tableLayoutPanel1.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
+            this.InputGroupBox = new System.Windows.Forms.GroupBox();
+            this.InputLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.VehicleBrandTextBox = new System.Windows.Forms.TextBox();
+            this.VehicleReleaseYearTextBox = new System.Windows.Forms.TextBox();
+            this.VehicleInitialPriceTextBox = new System.Windows.Forms.TextBox();
+            this.VehicleTypeComboBox = new System.Windows.Forms.ComboBox();
+            this.ControlGroupBox = new System.Windows.Forms.GroupBox();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.DeleteButton = new System.Windows.Forms.Button();
+            this.SaveButton = new System.Windows.Forms.Button();
+            this.VehicleGridView = new System.Windows.Forms.DataGridView();
+            this.TableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.RightTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.InputGroupBox.SuspendLayout();
+            this.InputLayoutPanel.SuspendLayout();
+            this.ControlGroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.VehicleGridView)).BeginInit();
+            this.TableLayoutPanel.SuspendLayout();
+            this.RightTableLayoutPanel.SuspendLayout();
             this.SuspendLayout();
             // 
-            // textFieldsGroupBox
+            // InputGroupBox
             // 
-            this.textFieldsGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textFieldsGroupBox.Location = new System.Drawing.Point(3, 3);
-            this.textFieldsGroupBox.Name = "textFieldsGroupBox";
-            this.textFieldsGroupBox.Size = new System.Drawing.Size(238, 216);
-            this.textFieldsGroupBox.TabIndex = 0;
-            this.textFieldsGroupBox.TabStop = false;
-            this.textFieldsGroupBox.Text = "Ввод";
+            this.InputGroupBox.Controls.Add(this.InputLayoutPanel);
+            this.InputGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.InputGroupBox.Location = new System.Drawing.Point(3, 3);
+            this.InputGroupBox.Name = "InputGroupBox";
+            this.InputGroupBox.Size = new System.Drawing.Size(238, 171);
+            this.InputGroupBox.TabIndex = 0;
+            this.InputGroupBox.TabStop = false;
+            this.InputGroupBox.Text = "Ввод";
             // 
-            // buttonsGroupBox
+            // InputLayoutPanel
             // 
-            this.buttonsGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonsGroupBox.Location = new System.Drawing.Point(3, 225);
-            this.buttonsGroupBox.Name = "buttonsGroupBox";
-            this.buttonsGroupBox.Size = new System.Drawing.Size(238, 216);
-            this.buttonsGroupBox.TabIndex = 1;
-            this.buttonsGroupBox.TabStop = false;
-            this.buttonsGroupBox.Text = "Управление";
+            this.InputLayoutPanel.Controls.Add(this.VehicleBrandTextBox);
+            this.InputLayoutPanel.Controls.Add(this.VehicleReleaseYearTextBox);
+            this.InputLayoutPanel.Controls.Add(this.VehicleInitialPriceTextBox);
+            this.InputLayoutPanel.Controls.Add(this.VehicleTypeComboBox);
+            this.InputLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.InputLayoutPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.InputLayoutPanel.Location = new System.Drawing.Point(3, 19);
+            this.InputLayoutPanel.Name = "InputLayoutPanel";
+            this.InputLayoutPanel.Size = new System.Drawing.Size(232, 149);
+            this.InputLayoutPanel.TabIndex = 0;
             // 
-            // vehicleGridView
+            // VehicleBrandTextBox
             // 
-            this.vehicleGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.vehicleGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.vehicleGridView.Location = new System.Drawing.Point(3, 3);
-            this.vehicleGridView.Name = "vehicleGridView";
-            this.vehicleGridView.RowTemplate.Height = 25;
-            this.vehicleGridView.Size = new System.Drawing.Size(544, 444);
-            this.vehicleGridView.TabIndex = 2;
+            this.VehicleBrandTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.VehicleBrandTextBox.Location = new System.Drawing.Point(3, 3);
+            this.VehicleBrandTextBox.Name = "VehicleBrandTextBox";
+            this.VehicleBrandTextBox.PlaceholderText = "Марка";
+            this.VehicleBrandTextBox.Size = new System.Drawing.Size(226, 23);
+            this.VehicleBrandTextBox.TabIndex = 0;
             // 
-            // tableLayoutPanel1
+            // VehicleReleaseYearTextBox
             // 
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 250F));
-            this.tableLayoutPanel1.Controls.Add(this.vehicleGridView, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 1, 0);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(800, 450);
-            this.tableLayoutPanel1.TabIndex = 3;
+            this.VehicleReleaseYearTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.VehicleReleaseYearTextBox.Location = new System.Drawing.Point(3, 32);
+            this.VehicleReleaseYearTextBox.MaxLength = 4;
+            this.VehicleReleaseYearTextBox.Name = "VehicleReleaseYearTextBox";
+            this.VehicleReleaseYearTextBox.PlaceholderText = "Год выпуска";
+            this.VehicleReleaseYearTextBox.Size = new System.Drawing.Size(226, 23);
+            this.VehicleReleaseYearTextBox.TabIndex = 1;
+            this.VehicleReleaseYearTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.VehicleReleaseYearTextBox_Validating);
             // 
-            // tableLayoutPanel2
+            // VehicleInitialPriceTextBox
             // 
-            this.tableLayoutPanel2.ColumnCount = 1;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.Controls.Add(this.textFieldsGroupBox, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.buttonsGroupBox, 0, 1);
-            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(553, 3);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 2;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(244, 444);
-            this.tableLayoutPanel2.TabIndex = 3;
+            this.VehicleInitialPriceTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.VehicleInitialPriceTextBox.Location = new System.Drawing.Point(3, 61);
+            this.VehicleInitialPriceTextBox.Name = "VehicleInitialPriceTextBox";
+            this.VehicleInitialPriceTextBox.PlaceholderText = "Стоимость";
+            this.VehicleInitialPriceTextBox.Size = new System.Drawing.Size(226, 23);
+            this.VehicleInitialPriceTextBox.TabIndex = 2;
+            this.VehicleInitialPriceTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.VehicleInitialPriceTextBox_Validating);
             // 
-            // Form1
+            // VehicleTypeComboBox
+            // 
+            this.VehicleTypeComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.VehicleTypeComboBox.FormattingEnabled = true;
+            this.VehicleTypeComboBox.Items.AddRange(new object[] {
+            "Легковой автомобиль",
+            "Грузовик"});
+            this.VehicleTypeComboBox.Location = new System.Drawing.Point(3, 90);
+            this.VehicleTypeComboBox.Name = "VehicleTypeComboBox";
+            this.VehicleTypeComboBox.Size = new System.Drawing.Size(226, 23);
+            this.VehicleTypeComboBox.TabIndex = 3;
+            // 
+            // ControlGroupBox
+            // 
+            this.ControlGroupBox.Controls.Add(this.button5);
+            this.ControlGroupBox.Controls.Add(this.button4);
+            this.ControlGroupBox.Controls.Add(this.button3);
+            this.ControlGroupBox.Controls.Add(this.DeleteButton);
+            this.ControlGroupBox.Controls.Add(this.SaveButton);
+            this.ControlGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ControlGroupBox.Location = new System.Drawing.Point(3, 180);
+            this.ControlGroupBox.Name = "ControlGroupBox";
+            this.ControlGroupBox.Size = new System.Drawing.Size(238, 172);
+            this.ControlGroupBox.TabIndex = 1;
+            this.ControlGroupBox.TabStop = false;
+            this.ControlGroupBox.Text = "Управление";
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(73, 138);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(75, 23);
+            this.button5.TabIndex = 4;
+            this.button5.Text = "Сортировать";
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(73, 109);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.TabIndex = 3;
+            this.button4.Text = "Сравнить";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(73, 80);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 2;
+            this.button3.Text = "Копировать";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // DeleteButton
+            // 
+            this.DeleteButton.Location = new System.Drawing.Point(73, 51);
+            this.DeleteButton.Name = "DeleteButton";
+            this.DeleteButton.Size = new System.Drawing.Size(75, 23);
+            this.DeleteButton.TabIndex = 1;
+            this.DeleteButton.Text = "Удалить";
+            this.DeleteButton.UseVisualStyleBackColor = true;
+            // 
+            // SaveButton
+            // 
+            this.SaveButton.Enabled = false;
+            this.SaveButton.Location = new System.Drawing.Point(73, 22);
+            this.SaveButton.Name = "SaveButton";
+            this.SaveButton.Size = new System.Drawing.Size(75, 23);
+            this.SaveButton.TabIndex = 0;
+            this.SaveButton.Text = "Сохранить";
+            this.SaveButton.UseVisualStyleBackColor = true;
+            this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
+            // 
+            // VehicleGridView
+            // 
+            this.VehicleGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.VehicleGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.VehicleGridView.Location = new System.Drawing.Point(3, 3);
+            this.VehicleGridView.Name = "VehicleGridView";
+            this.VehicleGridView.RowTemplate.Height = 25;
+            this.VehicleGridView.Size = new System.Drawing.Size(428, 355);
+            this.VehicleGridView.TabIndex = 2;
+            // 
+            // TableLayoutPanel
+            // 
+            this.TableLayoutPanel.ColumnCount = 2;
+            this.TableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.TableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 250F));
+            this.TableLayoutPanel.Controls.Add(this.VehicleGridView, 0, 0);
+            this.TableLayoutPanel.Controls.Add(this.RightTableLayoutPanel, 1, 0);
+            this.TableLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TableLayoutPanel.Location = new System.Drawing.Point(0, 0);
+            this.TableLayoutPanel.Name = "TableLayoutPanel";
+            this.TableLayoutPanel.RowCount = 1;
+            this.TableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.TableLayoutPanel.Size = new System.Drawing.Size(684, 361);
+            this.TableLayoutPanel.TabIndex = 3;
+            // 
+            // RightTableLayoutPanel
+            // 
+            this.RightTableLayoutPanel.ColumnCount = 1;
+            this.RightTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.RightTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.RightTableLayoutPanel.Controls.Add(this.InputGroupBox, 0, 0);
+            this.RightTableLayoutPanel.Controls.Add(this.ControlGroupBox, 0, 1);
+            this.RightTableLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.RightTableLayoutPanel.Location = new System.Drawing.Point(437, 3);
+            this.RightTableLayoutPanel.Name = "RightTableLayoutPanel";
+            this.RightTableLayoutPanel.RowCount = 2;
+            this.RightTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.RightTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.RightTableLayoutPanel.Size = new System.Drawing.Size(244, 355);
+            this.RightTableLayoutPanel.TabIndex = 3;
+            // 
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.tableLayoutPanel1);
-            this.Name = "Form1";
+            this.ClientSize = new System.Drawing.Size(684, 361);
+            this.Controls.Add(this.TableLayoutPanel);
+            this.MinimumSize = new System.Drawing.Size(700, 400);
+            this.Name = "MainForm";
             this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.vehicleGridView)).EndInit();
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel2.ResumeLayout(false);
+            this.InputGroupBox.ResumeLayout(false);
+            this.InputLayoutPanel.ResumeLayout(false);
+            this.InputLayoutPanel.PerformLayout();
+            this.ControlGroupBox.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.VehicleGridView)).EndInit();
+            this.TableLayoutPanel.ResumeLayout(false);
+            this.RightTableLayoutPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
 	}
 
 	#endregion
 
-	private System.Windows.Forms.GroupBox textFieldsGroupBox;
-	private System.Windows.Forms.GroupBox buttonsGroupBox;
-	private System.Windows.Forms.DataGridView vehicleGridView;
-	private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-	private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+	private System.Windows.Forms.GroupBox InputGroupBox;
+	private System.Windows.Forms.GroupBox ControlGroupBox;
+	private System.Windows.Forms.DataGridView VehicleGridView;
+	private System.Windows.Forms.TableLayoutPanel TableLayoutPanel;
+	private System.Windows.Forms.TableLayoutPanel RightTableLayoutPanel;
+    private System.Windows.Forms.ComboBox VehicleTypeComboBox;
+    private System.Windows.Forms.TextBox VehicleInitialPriceTextBox;
+    private System.Windows.Forms.TextBox VehicleReleaseYearTextBox;
+    private System.Windows.Forms.TextBox VehicleBrandTextBox;
+    private System.Windows.Forms.FlowLayoutPanel InputLayoutPanel;
+    private System.Windows.Forms.Button button5;
+    private System.Windows.Forms.Button button4;
+    private System.Windows.Forms.Button button3;
+    private System.Windows.Forms.Button DeleteButton;
+    private System.Windows.Forms.Button SaveButton;
 }
