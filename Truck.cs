@@ -14,7 +14,7 @@ public sealed class Truck : Vehicle
 		var difference = currentYear - ReleaseYear;
 		var regressionFactor = difference switch
 		{
-			0 => 0,
+			<= 0 => 0,
 			<= 3 => 0.1,
 			<= 10 => 0.2,
 			_ => 0.3
