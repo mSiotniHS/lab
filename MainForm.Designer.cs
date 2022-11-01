@@ -1,6 +1,6 @@
 ﻿namespace lab;
 
-partial class Form1
+partial class MainForm
 {
 	/// <summary>
 	///  Required designer variable.
@@ -237,7 +237,7 @@ partial class Form1
             this.ClientSize = new System.Drawing.Size(684, 361);
             this.Controls.Add(this.TableLayoutPanel);
             this.MinimumSize = new System.Drawing.Size(700, 400);
-            this.Name = "Form1";
+            this.Name = "MainForm";
             this.Text = "Form1";
             this.InputGroupBox.ResumeLayout(false);
             this.InputLayoutPanel.ResumeLayout(false);

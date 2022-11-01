@@ -6,14 +6,14 @@ using System.Windows.Forms;
 
 namespace lab;
 
-public sealed partial class Form1 : Form
+public sealed partial class MainForm : Form
 {
 	private readonly BindingSource _bindingSource;
 	private readonly List<Vehicle> _vehicles;
 
 	private enum VehicleType { Car, Truck, None };
 
-	public Form1()
+	public MainForm()
 	{
 		InitializeComponent();
 
