@@ -36,9 +36,9 @@ partial class Form1
             this.VehicleInitialPriceTextBox = new System.Windows.Forms.TextBox();
             this.VehicleTypeComboBox = new System.Windows.Forms.ComboBox();
             this.ControlGroupBox = new System.Windows.Forms.GroupBox();
-            this.button5 = new System.Windows.Forms.Button();
+            this.SortButton = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.CopyButton = new System.Windows.Forms.Button();
             this.DeleteButton = new System.Windows.Forms.Button();
             this.SaveButton = new System.Windows.Forms.Button();
             this.VehicleGridView = new System.Windows.Forms.DataGridView();
@@ -121,9 +121,9 @@ partial class Form1
             // 
             // ControlGroupBox
             // 
-            this.ControlGroupBox.Controls.Add(this.button5);
+            this.ControlGroupBox.Controls.Add(this.SortButton);
             this.ControlGroupBox.Controls.Add(this.button4);
-            this.ControlGroupBox.Controls.Add(this.button3);
+            this.ControlGroupBox.Controls.Add(this.CopyButton);
             this.ControlGroupBox.Controls.Add(this.DeleteButton);
             this.ControlGroupBox.Controls.Add(this.SaveButton);
             this.ControlGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -134,48 +134,55 @@ partial class Form1
             this.ControlGroupBox.TabStop = false;
             this.ControlGroupBox.Text = "Управление";
             // 
-            // button5
+            // SortButton
             // 
-            this.button5.Location = new System.Drawing.Point(73, 138);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "Сортировать";
-            this.button5.UseVisualStyleBackColor = true;
+            this.SortButton.Location = new System.Drawing.Point(6, 138);
+            this.SortButton.Name = "SortButton";
+            this.SortButton.Size = new System.Drawing.Size(226, 23);
+            this.SortButton.TabIndex = 4;
+            this.SortButton.Text = "Сортировать";
+            this.SortButton.UseVisualStyleBackColor = true;
+            this.SortButton.Click += new System.EventHandler(this.SortButton_Click);
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(73, 109);
+            this.button4.Location = new System.Drawing.Point(6, 109);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.Size = new System.Drawing.Size(226, 23);
             this.button4.TabIndex = 3;
             this.button4.Text = "Сравнить";
             this.button4.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // CopyButton
             // 
-            this.button3.Location = new System.Drawing.Point(73, 80);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Копировать";
-            this.button3.UseVisualStyleBackColor = true;
+            this.CopyButton.Enabled = false;
+            this.CopyButton.Location = new System.Drawing.Point(6, 80);
+            this.CopyButton.Name = "CopyButton";
+            this.CopyButton.Size = new System.Drawing.Size(226, 23);
+            this.CopyButton.TabIndex = 2;
+            this.CopyButton.Text = "Копировать";
+            this.CopyButton.UseVisualStyleBackColor = true;
+            this.CopyButton.Click += new System.EventHandler(this.CopyButton_Click);
             // 
             // DeleteButton
             // 
-            this.DeleteButton.Location = new System.Drawing.Point(73, 51);
+            this.DeleteButton.Enabled = false;
+            this.DeleteButton.Location = new System.Drawing.Point(6, 51);
             this.DeleteButton.Name = "DeleteButton";
-            this.DeleteButton.Size = new System.Drawing.Size(75, 23);
+            this.DeleteButton.Size = new System.Drawing.Size(226, 23);
             this.DeleteButton.TabIndex = 1;
             this.DeleteButton.Text = "Удалить";
             this.DeleteButton.UseVisualStyleBackColor = true;
+            this.DeleteButton.Click += new System.EventHandler(this.DeleteButton_Click);
             // 
             // SaveButton
             // 
+            this.SaveButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.SaveButton.Enabled = false;
-            this.SaveButton.Location = new System.Drawing.Point(73, 22);
+            this.SaveButton.Location = new System.Drawing.Point(6, 22);
             this.SaveButton.Name = "SaveButton";
-            this.SaveButton.Size = new System.Drawing.Size(75, 23);
+            this.SaveButton.Size = new System.Drawing.Size(226, 23);
             this.SaveButton.TabIndex = 0;
             this.SaveButton.Text = "Сохранить";
             this.SaveButton.UseVisualStyleBackColor = true;
@@ -190,6 +197,7 @@ partial class Form1
             this.VehicleGridView.RowTemplate.Height = 25;
             this.VehicleGridView.Size = new System.Drawing.Size(428, 355);
             this.VehicleGridView.TabIndex = 2;
+            this.VehicleGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.VehicleGridView_CellClick);
             // 
             // TableLayoutPanel
             // 
@@ -222,14 +230,14 @@ partial class Form1
             this.RightTableLayoutPanel.Size = new System.Drawing.Size(244, 355);
             this.RightTableLayoutPanel.TabIndex = 3;
             // 
-            // MainForm
+            // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(684, 361);
             this.Controls.Add(this.TableLayoutPanel);
             this.MinimumSize = new System.Drawing.Size(700, 400);
-            this.Name = "MainForm";
+            this.Name = "Form1";
             this.Text = "Form1";
             this.InputGroupBox.ResumeLayout(false);
             this.InputLayoutPanel.ResumeLayout(false);
@@ -254,9 +262,9 @@ partial class Form1
     private System.Windows.Forms.TextBox VehicleReleaseYearTextBox;
     private System.Windows.Forms.TextBox VehicleBrandTextBox;
     private System.Windows.Forms.FlowLayoutPanel InputLayoutPanel;
-    private System.Windows.Forms.Button button5;
+    private System.Windows.Forms.Button SortButton;
     private System.Windows.Forms.Button button4;
-    private System.Windows.Forms.Button button3;
+    private System.Windows.Forms.Button CopyButton;
     private System.Windows.Forms.Button DeleteButton;
     private System.Windows.Forms.Button SaveButton;
 }
