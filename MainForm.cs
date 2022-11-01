@@ -24,12 +24,8 @@ public sealed partial class MainForm : Form
 			DataSource = _vehicles
 		};
 
-		#region VehicleGridView Setup
-
 		VehicleGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 		VehicleGridView.DataSource = _bindingSource;
-
-		#endregion
 
 		// If any element of form changes...
 		VehicleBrandTextBox.TextChanged += OnFormChanged;
