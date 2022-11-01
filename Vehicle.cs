@@ -1,4 +1,6 @@
-﻿namespace lab;
+﻿using System;
+
+namespace lab;
 
 public abstract class Vehicle
 {
@@ -14,4 +16,13 @@ public abstract class Vehicle
 	}
 
 	public abstract double CalculatePrice();
+
+	public override bool Equals(object? obj)
+	{
+		return obj switch
+		{
+			Vehicle vehicle => vehicle.Brand == Brand && vehicle.ReleaseYear == ReleaseYear && vehicle.InitialPrice == InitialPrice,
+			_ => throw new NotImplementedException()
+		};
+	}
 }

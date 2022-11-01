@@ -16,4 +16,14 @@ public sealed class Car : Vehicle
 
 		return InitialPrice * Math.Pow(1 - regressionFactor, difference);
 	}
+
+	public override bool Equals(object? obj)
+	{
+		return obj switch
+		{
+			Car => base.Equals(obj),
+			Truck => false,
+			_ => throw new NotImplementedException()
+		};
+	}
 }

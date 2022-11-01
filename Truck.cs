@@ -22,4 +22,14 @@ public sealed class Truck : Vehicle
 
 		return InitialPrice * (1 - regressionFactor);
 	}
+
+	public override bool Equals(object? obj)
+	{
+        return obj switch
+        {
+            Truck => base.Equals(obj),
+            Car => false,
+            _ => throw new NotImplementedException()
+        };
+    }
 }
