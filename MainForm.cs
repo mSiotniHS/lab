@@ -48,21 +48,6 @@ public sealed partial class MainForm : Form
 		return brandIsFilled && yearIsFilled && priceIsFilled && typeIsSelected;
 	}
 
-	private void VehicleReleaseYearTextBox_Validating(object sender, System.ComponentModel.CancelEventArgs e)
-	{
-		var isNumber = int.TryParse(VehicleReleaseYearTextBox.Text, out _);
-		if (isNumber)
-		{
-			e.Cancel = false;
-			VehicleReleaseYearTextBox.BackColor = SystemColors.Window;
-		}
-		else
-		{
-			e.Cancel = true;
-			VehicleReleaseYearTextBox.BackColor = Color.Red;
-		}
-	}
-
 	private (string, uint, double, VehicleType) CurrentInputState
 	{
 		get
@@ -93,22 +78,6 @@ public sealed partial class MainForm : Form
 				VehicleType.None => -1,
 				_ => throw new Exception("That's... unreal")
 			};
-		}
-	}
-
-	private void VehicleInitialPriceTextBox_Validating(object sender, System.ComponentModel.CancelEventArgs e)
-	{
-		var culturedInput = VehicleInitialPriceTextBox.Text.Replace(',', '.');
-		var isFloat = double.TryParse(culturedInput, NumberStyles.Any, CultureInfo.InvariantCulture, out _);
-		if (isFloat)
-		{
-			e.Cancel = false;
-			VehicleInitialPriceTextBox.BackColor = SystemColors.Window;
-		}
-		else
-		{
-			e.Cancel = true;
-			VehicleInitialPriceTextBox.BackColor = Color.Red;
 		}
 	}
 

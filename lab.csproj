@@ -11,6 +11,9 @@
       <Compile Update="MainForm.Buttons.cs">
         <DependentUpon>MainForm.cs</DependentUpon>
       </Compile>
+      <Compile Update="MainForm.FormValidation.cs">
+        <DependentUpon>MainForm.cs</DependentUpon>
+      </Compile>
     </ItemGroup>
 
 </Project>
