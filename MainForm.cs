@@ -159,15 +159,8 @@ public sealed partial class MainForm : Form
 	{
 		_vehicles.Sort((first, second) =>
 		{
-			int byReleaseYear = first.ReleaseYear.CompareTo(second.ReleaseYear);
-			if (byReleaseYear != 0)
-			{
-				return byReleaseYear;
-			}
-			else
-			{
-				return first.CalculatePrice().CompareTo(second.CalculatePrice());
-			}
+			var byReleaseYear = first.ReleaseYear.CompareTo(second.ReleaseYear);
+			return byReleaseYear != 0 ? byReleaseYear : first.CalculatePrice().CompareTo(second.CalculatePrice());
 		});
 
 		_bindingSource.ResetBindings(false);
