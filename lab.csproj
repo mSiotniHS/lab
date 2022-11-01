@@ -7,4 +7,10 @@
         <UseWindowsForms>true</UseWindowsForms>
     </PropertyGroup>
 
+    <ItemGroup>
+      <Compile Update="MainForm.Buttons.cs">
+        <DependentUpon>MainForm.cs</DependentUpon>
+      </Compile>
+    </ItemGroup>
+
 </Project>
