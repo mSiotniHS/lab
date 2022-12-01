@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Globalization;
+using System.Windows.Forms;
 
 namespace lab;
 
@@ -54,5 +55,14 @@ partial class MainForm
 		VehicleReleaseYearTextBox.Clear();
 		VehicleInitialPriceTextBox.Clear();
 		VehicleTypeComboBox.SelectedIndex = -1;
+	}
+
+	private static void VehicleGridView_CellFormatting(object? sender, DataGridViewCellFormattingEventArgs e)
+	{
+		// formatting prices
+		if (e.Value is null || e.ColumnIndex is not (2 or 3)) return;
+
+		var price = Convert.ToDouble(e.Value);
+		e.Value = Math.Round(price, 2);
 	}
 }

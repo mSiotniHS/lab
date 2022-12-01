@@ -31,6 +31,8 @@ public sealed partial class MainForm : Form
 		VehicleGridView.Columns[3].HeaderText = "Текущая стоимость";
 		VehicleGridView.Columns[4].HeaderText = "Тип";
 
+		VehicleGridView.CellFormatting += VehicleGridView_CellFormatting;
+
         // If any element of form changes...
         VehicleBrandTextBox.TextChanged += OnFormChanged;
 		VehicleReleaseYearTextBox.TextChanged += OnFormChanged;
