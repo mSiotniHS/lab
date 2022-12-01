@@ -21,7 +21,7 @@ public abstract class Vehicle
 	{
 		return obj switch
 		{
-			Vehicle vehicle => vehicle.Brand == Brand && vehicle.ReleaseYear == ReleaseYear && vehicle.InitialPrice == InitialPrice,
+			Vehicle vehicle => vehicle.Brand == Brand && vehicle.ReleaseYear == ReleaseYear && Math.Abs(vehicle.InitialPrice - InitialPrice) < 0.01,
 			_ => throw new NotImplementedException()
 		};
 	}
