@@ -4,9 +4,9 @@ namespace lab;
 
 public abstract class Vehicle
 {
-	public string Brand { get; set; }
-	public uint ReleaseYear { get; set; }
-	public double InitialPrice { get; set; }
+	public string Brand { get; }
+	public uint ReleaseYear { get; }
+	public double InitialPrice { get; }
 
 	public Vehicle(string brand, uint releaseYear, double initialPrice)
 	{
