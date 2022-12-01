@@ -25,6 +25,8 @@ public sealed partial class MainForm : Form
 		VehicleGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 		VehicleGridView.DataSource = _bindingSource;
 
+		_bindingSource.ListChanged += OnListChanges;
+
 		VehicleGridView.Columns[0].HeaderText = "Марка";
 		VehicleGridView.Columns[1].HeaderText = "Год выпуска";
 		VehicleGridView.Columns[2].HeaderText = "Исходная стоимость";
@@ -43,6 +45,11 @@ public sealed partial class MainForm : Form
 	private void OnFormChanged(object? sender, EventArgs e)
 	{
 		SaveButton.Enabled = IsFormFilled();
+	}
+
+	private void OnListChanges(object? sender, EventArgs e)
+	{
+		SortButton.Enabled = _vehicles.Count >= 2;
 	}
 
 	private void VehicleGridView_CellClick(object sender, DataGridViewCellEventArgs e)
