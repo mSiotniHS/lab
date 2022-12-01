@@ -46,11 +46,10 @@ partial class MainForm
 			MessageBoxButtons.OKCancel,
 			MessageBoxIcon.Question);
 
-		if (result == DialogResult.OK)
-		{
-			_vehicles.RemoveAt(selectedRow);
-			_bindingSource.ResetBindings(false);
-		}
+		if (result != DialogResult.OK) return;
+
+		_vehicles.RemoveAt(selectedRow);
+		_bindingSource.ResetBindings(false);
 	}
 
 	private void CopyButton_Click(object sender, EventArgs e)
