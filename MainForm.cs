@@ -25,8 +25,14 @@ public sealed partial class MainForm : Form
 		VehicleGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 		VehicleGridView.DataSource = _bindingSource;
 
-		// If any element of form changes...
-		VehicleBrandTextBox.TextChanged += OnFormChanged;
+		VehicleGridView.Columns[0].HeaderText = "Марка";
+		VehicleGridView.Columns[1].HeaderText = "Год выпуска";
+		VehicleGridView.Columns[2].HeaderText = "Исходная стоимость";
+		VehicleGridView.Columns[3].HeaderText = "Текущая стоимость";
+		VehicleGridView.Columns[4].HeaderText = "Тип";
+
+        // If any element of form changes...
+        VehicleBrandTextBox.TextChanged += OnFormChanged;
 		VehicleReleaseYearTextBox.TextChanged += OnFormChanged;
 		VehicleInitialPriceTextBox.TextChanged += OnFormChanged;
 		VehicleTypeComboBox.SelectedIndexChanged += OnFormChanged;
