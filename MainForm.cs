@@ -59,4 +59,13 @@ public sealed partial class MainForm : Form
 		DeleteButton.Enabled = isRowSelected;
 		CopyButton.Enabled = isRowSelected;
 	}
+
+	private static void VehicleGridView_CellFormatting(object? sender, DataGridViewCellFormattingEventArgs e)
+	{
+		// formatting prices
+		if (e.Value is null || e.ColumnIndex is not (2 or 3)) return;
+
+		var price = Convert.ToDouble(e.Value);
+		e.Value = Math.Round(price, 2);
+	}
 }
