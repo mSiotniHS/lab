@@ -236,7 +236,7 @@ partial class MainForm
             this.RightTableLayoutPanel.Size = new System.Drawing.Size(244, 355);
             this.RightTableLayoutPanel.TabIndex = 3;
             // 
-            // Form1
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
