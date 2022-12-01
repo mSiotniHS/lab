@@ -37,7 +37,6 @@ partial class MainForm
             this.VehicleTypeComboBox = new System.Windows.Forms.ComboBox();
             this.ControlGroupBox = new System.Windows.Forms.GroupBox();
             this.SortButton = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.CopyButton = new System.Windows.Forms.Button();
             this.DeleteButton = new System.Windows.Forms.Button();
             this.SaveButton = new System.Windows.Forms.Button();
@@ -58,7 +57,7 @@ partial class MainForm
             this.InputGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.InputGroupBox.Location = new System.Drawing.Point(3, 3);
             this.InputGroupBox.Name = "InputGroupBox";
-            this.InputGroupBox.Size = new System.Drawing.Size(238, 171);
+            this.InputGroupBox.Size = new System.Drawing.Size(238, 208);
             this.InputGroupBox.TabIndex = 0;
             this.InputGroupBox.TabStop = false;
             this.InputGroupBox.Text = "Ввод";
@@ -73,7 +72,7 @@ partial class MainForm
             this.InputLayoutPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.InputLayoutPanel.Location = new System.Drawing.Point(3, 19);
             this.InputLayoutPanel.Name = "InputLayoutPanel";
-            this.InputLayoutPanel.Size = new System.Drawing.Size(232, 149);
+            this.InputLayoutPanel.Size = new System.Drawing.Size(232, 186);
             this.InputLayoutPanel.TabIndex = 0;
             // 
             // VehicleBrandTextBox
@@ -122,21 +121,21 @@ partial class MainForm
             // ControlGroupBox
             // 
             this.ControlGroupBox.Controls.Add(this.SortButton);
-            this.ControlGroupBox.Controls.Add(this.button4);
             this.ControlGroupBox.Controls.Add(this.CopyButton);
             this.ControlGroupBox.Controls.Add(this.DeleteButton);
             this.ControlGroupBox.Controls.Add(this.SaveButton);
             this.ControlGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ControlGroupBox.Location = new System.Drawing.Point(3, 180);
+            this.ControlGroupBox.Location = new System.Drawing.Point(3, 217);
             this.ControlGroupBox.Name = "ControlGroupBox";
-            this.ControlGroupBox.Size = new System.Drawing.Size(238, 172);
+            this.ControlGroupBox.Size = new System.Drawing.Size(238, 135);
             this.ControlGroupBox.TabIndex = 1;
             this.ControlGroupBox.TabStop = false;
             this.ControlGroupBox.Text = "Управление";
             // 
             // SortButton
             // 
-            this.SortButton.Location = new System.Drawing.Point(6, 138);
+            this.SortButton.Enabled = false;
+            this.SortButton.Location = new System.Drawing.Point(6, 105);
             this.SortButton.Name = "SortButton";
             this.SortButton.Size = new System.Drawing.Size(226, 23);
             this.SortButton.TabIndex = 4;
@@ -144,19 +143,10 @@ partial class MainForm
             this.SortButton.UseVisualStyleBackColor = true;
             this.SortButton.Click += new System.EventHandler(this.SortButton_Click);
             // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(6, 109);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(226, 23);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Сравнить";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
             // CopyButton
             // 
             this.CopyButton.Enabled = false;
-            this.CopyButton.Location = new System.Drawing.Point(6, 80);
+            this.CopyButton.Location = new System.Drawing.Point(6, 77);
             this.CopyButton.Name = "CopyButton";
             this.CopyButton.Size = new System.Drawing.Size(226, 23);
             this.CopyButton.TabIndex = 2;
@@ -167,7 +157,7 @@ partial class MainForm
             // DeleteButton
             // 
             this.DeleteButton.Enabled = false;
-            this.DeleteButton.Location = new System.Drawing.Point(6, 51);
+            this.DeleteButton.Location = new System.Drawing.Point(6, 48);
             this.DeleteButton.Name = "DeleteButton";
             this.DeleteButton.Size = new System.Drawing.Size(226, 23);
             this.DeleteButton.TabIndex = 1;
@@ -180,7 +170,7 @@ partial class MainForm
             this.SaveButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.SaveButton.Enabled = false;
-            this.SaveButton.Location = new System.Drawing.Point(6, 22);
+            this.SaveButton.Location = new System.Drawing.Point(6, 19);
             this.SaveButton.Name = "SaveButton";
             this.SaveButton.Size = new System.Drawing.Size(226, 23);
             this.SaveButton.TabIndex = 0;
@@ -231,8 +221,8 @@ partial class MainForm
             this.RightTableLayoutPanel.Location = new System.Drawing.Point(437, 3);
             this.RightTableLayoutPanel.Name = "RightTableLayoutPanel";
             this.RightTableLayoutPanel.RowCount = 2;
-            this.RightTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.RightTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.RightTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 60.28169F));
+            this.RightTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 39.71831F));
             this.RightTableLayoutPanel.Size = new System.Drawing.Size(244, 355);
             this.RightTableLayoutPanel.TabIndex = 3;
             // 
@@ -269,7 +259,6 @@ partial class MainForm
     private System.Windows.Forms.TextBox VehicleBrandTextBox;
     private System.Windows.Forms.FlowLayoutPanel InputLayoutPanel;
     private System.Windows.Forms.Button SortButton;
-    private System.Windows.Forms.Button button4;
     private System.Windows.Forms.Button CopyButton;
     private System.Windows.Forms.Button DeleteButton;
     private System.Windows.Forms.Button SaveButton;
