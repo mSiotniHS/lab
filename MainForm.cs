@@ -9,7 +9,7 @@ public sealed partial class MainForm : Form
 	private readonly BindingSource _bindingSource;
 	private readonly List<Vehicle> _vehicles;
 
-	private enum VehicleType { Car, Truck, None };
+	private enum VehicleType { Car, Truck, None }
 
 	public MainForm()
 	{
@@ -17,7 +17,7 @@ public sealed partial class MainForm : Form
 
 		_vehicles = new List<Vehicle>();
 
-		_bindingSource = new BindingSource()
+		_bindingSource = new BindingSource
 		{
 			DataSource = _vehicles
 		};
