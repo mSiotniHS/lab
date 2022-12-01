@@ -190,11 +190,17 @@ partial class MainForm
             // 
             // VehicleGridView
             // 
+            this.VehicleGridView.AllowUserToAddRows = false;
+            this.VehicleGridView.AllowUserToDeleteRows = false;
+            this.VehicleGridView.AllowUserToResizeColumns = false;
+            this.VehicleGridView.AllowUserToResizeRows = false;
             this.VehicleGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.VehicleGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.VehicleGridView.Location = new System.Drawing.Point(3, 3);
             this.VehicleGridView.Name = "VehicleGridView";
+            this.VehicleGridView.ReadOnly = true;
             this.VehicleGridView.RowTemplate.Height = 25;
+            this.VehicleGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.VehicleGridView.Size = new System.Drawing.Size(428, 355);
             this.VehicleGridView.TabIndex = 2;
             this.VehicleGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.VehicleGridView_CellClick);
