@@ -17,6 +17,9 @@ public abstract class Vehicle
 
 	public abstract double CalculatePrice();
 
+	public double Price => CalculatePrice();
+	public string Type => GetType().Name;
+
 	public override bool Equals(object? obj)
 	{
 		return obj switch
