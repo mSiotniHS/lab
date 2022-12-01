@@ -8,7 +8,7 @@ public abstract class Vehicle
 	public uint ReleaseYear { get; }
 	public double InitialPrice { get; }
 
-	public Vehicle(string brand, uint releaseYear, double initialPrice)
+	protected Vehicle(string brand, uint releaseYear, double initialPrice)
 	{
 		Brand = brand;
 		ReleaseYear = releaseYear;
